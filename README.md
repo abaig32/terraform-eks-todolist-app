@@ -37,11 +37,9 @@ Then I used Terraform to provision an EKS cluster that used the ECR image within
 
 ### 1. Clone the Repo
 
-```git clone <https://github.com/abaig32/terraform-project-portfolio.git>```
+```git clone <https://github.com/abaig32/terraform-eks-todolist-app.git>```
 
-```cd "terraform-project-portfolio" ```
-
-```cd "Kubernetes Cluster Deployment" ```
+```cd "terraform" ```
 
 ### 2. Initialize, Plan, and Apply Terraform Infrastructure (CLI Instructions)
 
@@ -79,13 +77,13 @@ Use this command to see your pods and clusters respectively to make sure they ar
 
 This allows your worker nodes to pull the image from ECR 
 
-```kubectl apply -f deployment.yaml```
+```kubectl apply -f ../kubernetes/deployment.yaml```
 
 ### 7. Apply service.yaml and get external-ip (CLI Instructions)
 
 This exposes your cluster to a load balancer so you can access the site 
 
-```kubectl apply -f service.yaml```
+```kubectl apply -f ../kubernetes/service.yaml```
 
 This command allows you to see the external-ip of your load balancer so you can connect to the cluster. Make sure to give it a few minutes before entering the ip into your web browser. 
 
